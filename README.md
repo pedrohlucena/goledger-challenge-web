@@ -1,4 +1,8 @@
-# GoLedger Challenge
+# `goledger-challenge-web`
+
+...
+
+# GoLedger Challenge Description
 
 In this challenge you will create a web interface to a blockchain application. In this application you must implement a imdb-like interface, to catalogue TV Shows, with series, seasons, episodes and watchlist registration.
 
