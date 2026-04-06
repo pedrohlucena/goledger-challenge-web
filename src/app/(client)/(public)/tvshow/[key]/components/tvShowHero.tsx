@@ -15,12 +15,12 @@ export function TvShowHero({ title, averageRating, totalRatings }: TvShowHeroPro
     .join("");
 
   return (
-    <div className="grid grid-cols-[200px_1fr_180px] gap-x-4">
+    <div className="flex flex-col gap-4 sm:grid sm:grid-cols-[minmax(0,12.5rem)_1fr_minmax(0,11.25rem)]">
       <div className="bg-card rounded flex items-center justify-center aspect-[2/3] border border-edge">
         <span className="text-4xl font-bold text-element select-none">{initials}</span>
       </div>
 
-      <div className="bg-card rounded flex items-center justify-center min-h-[280px] border border-edge">
+      <div className="bg-card rounded flex items-center justify-center aspect-[2/3] border border-edge">
         <div className="flex flex-col items-center gap-y-2 text-subtle">
           <ImagePlaceholderIcon />
           <span className="text-sm">Sem imagem disponível</span>

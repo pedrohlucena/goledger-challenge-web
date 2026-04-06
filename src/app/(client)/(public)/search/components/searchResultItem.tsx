@@ -12,7 +12,7 @@ export function SearchResultItem({ tvShow }: SearchResultItemProps) {
   return (
     <li className="flex items-start gap-3 py-3 border-b border-divider last:border-b-0">
       <a href={detailHref} className="flex-shrink-0">
-        <div className="w-[45px] h-[67px] bg-poster flex items-center justify-center rounded-sm overflow-hidden">
+        <div className="w-12 aspect-[2/3] bg-poster flex items-center justify-center rounded-sm overflow-hidden">
           <ImagePlaceholderIcon className="w-6 h-6 text-dim" />
         </div>
       </a>

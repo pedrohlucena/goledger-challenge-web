@@ -27,7 +27,7 @@ export function WatchlistItem({
       </span>
 
       <Link href={detailHref} className="flex-shrink-0">
-        <div className="w-[45px] h-[67px] bg-poster flex items-center justify-center rounded-sm overflow-hidden">
+        <div className="w-12 aspect-[2/3] bg-poster flex items-center justify-center rounded-sm overflow-hidden">
           <ImagePlaceholderIcon className="w-6 h-6 text-dim" />
         </div>
       </Link>

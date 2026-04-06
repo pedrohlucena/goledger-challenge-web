@@ -50,7 +50,7 @@ export default function FeaturedCarousel({ shows }: FeaturedCarouselProps) {
   if (shows.length === 0) return null;
 
   return (
-    <section className="w-full max-w-[1280px] mx-auto px-4 mt-10">
+    <section className="w-full max-w-7xl mx-auto px-4 mt-10">
       <SectionHeader title="Em destaque" />
 
       <div className="relative group">
@@ -66,10 +66,10 @@ export default function FeaturedCarousel({ shows }: FeaturedCarouselProps) {
             <a
               key={show["@key"]}
               href={`/tvshow/${show["@key"]}`}
-              className="flex-shrink-0 w-[180px] group/card"
+              className="flex-shrink-0 w-45 group/card"
             >
               <div
-                className={`w-[180px] h-[268px] rounded-lg bg-gradient-to-b ${CARD_COLORS[i % CARD_COLORS.length]} flex items-end p-3 relative overflow-hidden`}
+                className={`w-45 aspect-[2/3] rounded-lg bg-gradient-to-b ${CARD_COLORS[i % CARD_COLORS.length]} flex items-end p-3 relative overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-black/20" />
 

@@ -45,8 +45,8 @@ export default function HeroBanner({ shows }: HeroBannerProps) {
   const colorGradient = HERO_COLORS[activeIndex % HERO_COLORS.length];
 
   return (
-    <section className="relative w-full max-w-[1280px] mx-auto flex flex-col md:flex-row">
-      <div className="relative flex-1 min-h-[360px] md:min-h-[480px] overflow-hidden">
+    <section className="relative w-full max-w-7xl mx-auto flex flex-col md:flex-row">
+      <div className="relative flex-1 min-h-90 md:min-h-120 overflow-hidden">
         <div
           className={`absolute inset-0 bg-gradient-to-br ${colorGradient} to-black transition-colors duration-700`}
         />
@@ -99,7 +99,7 @@ export default function HeroBanner({ shows }: HeroBannerProps) {
         )}
       </div>
 
-      <aside className="w-full md:w-[300px] bg-card flex flex-col">
+      <aside className="w-full md:w-75 bg-card flex flex-col">
         <h3 className="px-4 pt-4 pb-2 text-accent font-bold text-sm tracking-wide">
           A seguir
         </h3>
@@ -111,7 +111,7 @@ export default function HeroBanner({ shows }: HeroBannerProps) {
               href={`/tvshow/${show["@key"]}`}
               className="flex items-start gap-3 px-4 py-3 hover:bg-card-hover transition-colors cursor-pointer"
             >
-              <div className="flex-shrink-0 w-[88px] h-[50px] rounded bg-element flex items-center justify-center relative overflow-hidden">
+              <div className="flex-shrink-0 w-22 aspect-video rounded bg-element flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-element to-element-deep" />
                 <PlayIcon className="h-5 w-5 relative z-[1] opacity-60" />
               </div>
