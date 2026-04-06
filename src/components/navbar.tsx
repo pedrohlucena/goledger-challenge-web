@@ -4,6 +4,8 @@ import Link from "next/link";
 import { HamburgerIcon } from "@/common/assets/svgs/hamburgerIcon";
 import { NavbarSearchForm } from "@/components/navbarSearchForm";
 import { WatchlistNavLink } from "@/components/watchlistNavLink";
+import { getSession } from "@/lib/session";
+import { logout } from "@/bff/auth";
 
 function NavbarSearchFormFallback() {
   return (
@@ -17,7 +19,9 @@ function NavbarSearchFormFallback() {
   );
 }
 
-export function Navbar() {
+export async function Navbar() {
+  const session = await getSession();
+
   return (
     <nav className="flex items-center bg-[var(--color-background)] h-14 px-4 gap-x-3 border-t-2 border-accent">
       <Link href="/" className="flex-shrink-0">
@@ -39,7 +43,20 @@ export function Navbar() {
       <span className="flex items-center gap-x-5 flex-shrink-0 text-sm text-white">
         <WatchlistNavLink />
 
-        <a href="" className="hover:text-accent transition-colors">Fazer login</a>
+        {session ? (
+          <form action={logout}>
+            <button
+              type="submit"
+              className="hover:text-accent transition-colors cursor-pointer"
+            >
+              Sair
+            </button>
+          </form>
+        ) : (
+          <Link href="/login" className="hover:text-accent transition-colors">
+            Fazer login
+          </Link>
+        )}
       </span>
     </nav>
   );

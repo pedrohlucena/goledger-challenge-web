@@ -1,4 +1,4 @@
-import { getAllWatchlists } from "@/actions/watchlist";
+import { getAllWatchlists } from "@/bff/watchlist";
 
 export async function WatchlistCount() {
   const watchlists = await getAllWatchlists();
