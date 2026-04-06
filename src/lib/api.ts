@@ -1,11 +1,11 @@
 import { env } from "@/utils";
 
-export async function post<RequestBody, ResponseBody>(
+async function post<RequestBody, ResponseBody>(
   path: string,
   body: RequestBody
-  ): Promise<ResponseBody> {
+): Promise<ResponseBody> {
   const url = `${env.backend.apiUrl}${path}`;
-  
+
   const res = await fetch(
     url, 
     {
@@ -14,7 +14,7 @@ export async function post<RequestBody, ResponseBody>(
       body: JSON.stringify(body),
     }
   );
-  
+
   return res.json() as Promise<ResponseBody>;
 }
 
@@ -26,3 +26,5 @@ function buildHeaders(): HeadersInit {
     "Content-Type": "application/json",
   };
 }
+
+export const api = { post };
