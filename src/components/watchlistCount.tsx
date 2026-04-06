@@ -1,6 +1,10 @@
 import { getAllWatchlists } from "@/bff/watchlist";
+import { getSession } from "@/lib/session";
 
 export async function WatchlistCount() {
+  const session = await getSession();
+  if (!session) return null;
+
   const watchlists = await getAllWatchlists();
   const count = watchlists[0]?.tvShows?.length ?? 0;
 
