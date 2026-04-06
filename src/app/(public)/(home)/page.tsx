@@ -1,6 +1,6 @@
 import { getAllTvShows } from "@/actions/tvShow";
-import HeroBanner from "@/app/(public)/components/heroBanner";
-import FeaturedCarousel from "@/app/(public)/components/featuredCarousel";
+import HeroBanner from "@/app/(public)/(home)/components/heroBanner";
+import FeaturedCarousel from "@/app/(public)/(home)/components/featuredCarousel";
 
 export default async function HomePage() {
   const tvShows = await getAllTvShows();

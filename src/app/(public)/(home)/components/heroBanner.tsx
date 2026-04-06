@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import type { TvShow } from "@/types/tvShow";
-import CarouselArrow from "@/app/(public)/components/carouselArrow";
+import CarouselArrow from "@/app/(public)/(home)/components/carouselArrow";
 import { PlayIcon } from "@/common/assets/svgs/playIcon";
 
 type HeroBannerProps = {

@@ -2,8 +2,8 @@
 
 import { useRef, useState, useEffect } from "react";
 import type { TvShow } from "@/types/tvShow";
-import CarouselArrow from "@/app/(public)/components/carouselArrow";
-import SectionHeader from "@/app/(public)/components/sectionHeader";
+import CarouselArrow from "@/app/(public)/(home)/components/carouselArrow";
+import SectionHeader from "@/app/(public)/(home)/components/sectionHeader";
 
 type FeaturedCarouselProps = {
   shows: TvShow[];
@@ -72,6 +72,7 @@ export default function FeaturedCarousel({ shows }: FeaturedCarouselProps) {
                 className={`w-[180px] h-[268px] rounded-lg bg-gradient-to-b ${CARD_COLORS[i % CARD_COLORS.length]} flex items-end p-3 relative overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-black/20" />
+
                 <span className="relative z-[1] text-white font-bold text-sm leading-tight line-clamp-3">
                   {show.title}
                 </span>
@@ -81,6 +82,7 @@ export default function FeaturedCarousel({ shows }: FeaturedCarouselProps) {
                 <p className="text-sm text-white font-medium truncate group-hover/card:text-accent transition-colors">
                   {show.title}
                 </p>
+                
                 <p className="text-xs text-dim mt-0.5 line-clamp-2">
                   {show.description}
                 </p>
