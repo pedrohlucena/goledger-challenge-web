@@ -21,7 +21,7 @@ export async function callGoLedger<Req, Res>(
   return res.json() as Promise<Res>;
 }
 
-function serviceCredentials(): string {
+export function serviceCredentials(): string {
   return Buffer.from(
     `${env.backend.loginUsername}:${env.backend.loginPassword}`
   ).toString("base64");

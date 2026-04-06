@@ -1,13 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/session";
-import { callGoLedger } from "@/bff/client";
-import { env } from "@/utils/env";
-
-function serviceCredentials(): string {
-  return Buffer.from(
-    `${env.backend.loginUsername}:${env.backend.loginPassword}`
-  ).toString("base64");
-}
+import { callGoLedger, serviceCredentials } from "@/bff/client";
 
 export async function POST(req: NextRequest) {
   const session = await getSession();

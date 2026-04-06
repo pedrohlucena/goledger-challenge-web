@@ -4,8 +4,6 @@ import { getAllTvShows } from "@/bff/tvShow";
 import { WatchlistHeader } from "@/app/(client)/(private)/watchlist/components/watchlistHeader";
 import { WatchlistControls } from "@/app/(client)/(private)/watchlist/components/watchlistControls";
 import { WatchlistList } from "@/app/(client)/(private)/watchlist/components/watchlistList";
-import { WatchlistAddSearch } from "@/app/(client)/(private)/watchlist/components/watchlistAddSearch";
-
 export const metadata: Metadata = {
   title: "Sua lista de favoritos - IMDp",
 };
